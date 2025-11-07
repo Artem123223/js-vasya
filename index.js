@@ -13,7 +13,10 @@ for(i = 0; i < 10; i++) {
         array[i][W] = Math.floor(Math.random() * 10) + 1
     }
 }
-document.write("<table border='1' cellspacing=1' cellpading='4' style='border-collapse: collapse;'>")
+document.write("<p style='color: red'>Червоний колір відповідає за найменьші цифри в рядках або стовпчиках</p>")
+document.write("<p style='color: purple'>Фіолетовий колір відповідає за найбільші цифри в рядках або стовпчиках</p>")
+document.write("<p style='color: green'>Зелений колір відповідає за серднє значення усіх цифр в рядках або стовпчиках</p>")
+document.write("<table border='1' cellspacing=0' cellpading='4' style='border-collapse: collapse;'>")
     document.write("<tbody>")
         for (let i = 0; i < 10; i++) {
             min = 0
@@ -28,9 +31,9 @@ document.write("<table border='1' cellspacing=1' cellpading='4' style='border-co
                     kSum += gg
                 }
             let avg = (kSum / 10).toFixed(1)
-            document.write("<td>" + max + "</td>")
-            document.write("<td>" + min + "</td>")
-            document.write("<td>" + avg + "</td>")
+            document.write("<td style='background-color: red'>" + max + "</td>")
+            document.write("<td style='background-color: purple'>" + min + "</td>")
+            document.write("<td style='background-color: green'>" + avg + "</td>")
             document.write("</tr>")
         }
         for(i = 0; i < 10; i++) {
@@ -51,9 +54,9 @@ document.write("<table border='1' cellspacing=1' cellpading='4' style='border-co
                     sSum += sg
                 }
                 let avg = (sSum / x).toFixed(1)
-                if (cs === 0) document.write("<td>" + max + "</td>")
-                if (cs === 1) document.write("<td>" + min + "</td>")
-                if (cs === 2) document.write("<td>" + avg + "</td>")
+                if (cs === 0) document.write("<td style='background-color: red'>" + max + "</td>")
+                if (cs === 1) document.write("<td style='background-color: purple'>" + min + "</td>")
+                if (cs === 2) document.write("<td style='background-color: green'>" + avg + "</td>")
             }
 
             if (cs === 0) {
