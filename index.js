@@ -13,9 +13,9 @@ for(i = 0; i < 10; i++) {
         array[i][W] = Math.floor(Math.random() * 10) + 1
     }
 }
-document.write("<p style='color: red'>Червоний колір відповідає за найменьші цифри в рядках або стовпчиках</p>")
-document.write("<p style='color: purple'>Фіолетовий колір відповідає за найбільші цифри в рядках або стовпчиках</p>")
-document.write("<p style='color: green'>Зелений колір відповідає за серднє значення усіх цифр в рядках або стовпчиках</p>")
+document.write("<p style='color: red'>😡Червоний колір відповідає за найменьші цифри в рядках або стовпчиках</p>")
+document.write("<p style='color: purple'>😈Фіолетовий колір відповідає за найбільші цифри в рядках або стовпчиках</p>")
+document.write("<p style='color: green'>🤢Зелений колір відповідає за серднє значення усіх цифр в рядках або стовпчиках</p>")
 document.write("<table border='1' cellspacing=0' cellpading='4' style='border-collapse: collapse;'>")
     document.write("<tbody>")
         for (let i = 0; i < 10; i++) {
@@ -25,7 +25,13 @@ document.write("<table border='1' cellspacing=0' cellpading='4' style='border-co
             document.write("<tr>")
                 for(W = 0; W < 10; W++) {
                     let gg = array[i][W]
-                    document.write("<td>" + gg + "</td>") 
+                    if (gg == max) {
+                        document.write("<td style='background-color: red'>" + gg + "</td>")
+                    } else if (gg == min) {
+                        document.write("<td style='background-color: purple'>" + gg + "</td>")
+                    } else {
+                        document.write("<td>" + gg + "</td>")
+                    }
                     if (gg < max) max = gg
                     if (gg > min) min = gg
                     kSum += gg
