@@ -1,0 +1,21 @@
+body {
+    font-size: 20px;
+}
+
+td {
+    text-align: center;
+    min-width: 25px;
+    min-height: 25px;
+}
+
+.flex-dss {
+    display: flex;
+    flex-direction: column;
+}
+
+.suma {
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    height: 80px;
+}
