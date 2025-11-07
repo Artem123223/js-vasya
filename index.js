@@ -20,7 +20,7 @@ document.write("<table border='1' cellspacing=0' cellpading='4' style='border-co
     document.write("<tbody>")
         for (let i = 0; i < 10; i++) {
             min = 0
-            max = 10
+            max = 11
             kSum = 0
             document.write("<tr>")
                 for(W = 0; W < 10; W++) {
